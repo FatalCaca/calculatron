@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculatron
 {
-    public class baseCalculator
+    public class BaseCalculator
     {
         public float Addition(float valeurA, float valeurB)
         {
@@ -20,17 +20,18 @@ namespace Calculatron
 
         public float Division(float valeurA, float valeurB)
         {
-            float value;
+            float result;
+
             if(valeurB != 0)
             {
-                value = valeurA / valeurB;
+                result = valeurA / valeurB;
             }
             else
             {
-                value = -1;
+                result = -1;
             }
             
-            return value;
+            return result;
         }
 
         public float Multiplication(float valeurA, float valeurB)
