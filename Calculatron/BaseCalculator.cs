@@ -42,5 +42,11 @@ namespace Calculatron
         {
             return valeurA * valeurB;
         }
+
+        /// Returns square of a number
+        public float Carre(float valeur)
+        {
+            return valeur * valeur;
+        }
     }
 }
