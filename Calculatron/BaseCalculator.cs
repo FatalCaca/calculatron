@@ -15,7 +15,7 @@ namespace Calculatron
         }
 
         /// Return the result of a substraction between 2 numbers
-        public float Soustraction(float valeurA, float valeurB)
+        public float Substraction(float valeurA, float valeurB)
         {
             return valeurA - valeurB;
         }
