@@ -1,1 +1,15 @@
 C:\Users\vlad\Calculatron\Calculatron\bin\Debug\Calculatron.exe.config
+C:\Users\vlad\Calculatron\Calculatron\bin\Debug\Calculatron.exe
+C:\Users\vlad\Calculatron\Calculatron\bin\Debug\Calculatron.pdb
+C:\Users\vlad\Calculatron\Calculatron\obj\Debug\MainWindow.baml
+C:\Users\vlad\Calculatron\Calculatron\obj\Debug\MainWindow.g.cs
+C:\Users\vlad\Calculatron\Calculatron\obj\Debug\App.g.cs
+C:\Users\vlad\Calculatron\Calculatron\obj\Debug\Calculatron_MarkupCompile.cache
+C:\Users\vlad\Calculatron\Calculatron\obj\Debug\Calculatron.g.resources
+C:\Users\vlad\Calculatron\Calculatron\obj\Debug\Calculatron.Properties.Resources.resources
+C:\Users\vlad\Calculatron\Calculatron\obj\Debug\Calculatron.csproj.GenerateResource.Cache
+C:\Users\vlad\Calculatron\Calculatron\obj\Debug\Calculatron.exe
+C:\Users\vlad\Calculatron\Calculatron\obj\Debug\Calculatron.pdb
+C:\Users\vlad\Calculatron\Calculatron\obj\Debug\Calculatron_Content.g.cs
+C:\Users\vlad\Calculatron\Calculatron\bin\Debug\NCalc.dll
+C:\Users\vlad\Calculatron\Calculatron\obj\Debug\Calculatron.csprojResolveAssemblyReference.cache
