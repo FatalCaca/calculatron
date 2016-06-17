@@ -1,0 +1,4 @@
+C:\Users\vlad\Calculatron\Calculatron\CalculatronTests\bin\Release\CalculatronTests.dll
+C:\Users\vlad\Calculatron\Calculatron\CalculatronTests\bin\Release\CalculatronTests.pdb
+C:\Users\vlad\Calculatron\Calculatron\CalculatronTests\obj\Release\CalculatronTests.dll
+C:\Users\vlad\Calculatron\Calculatron\CalculatronTests\obj\Release\CalculatronTests.pdb

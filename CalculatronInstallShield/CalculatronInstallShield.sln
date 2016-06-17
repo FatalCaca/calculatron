@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{ACA99D24-2A4B-4C16-9E92-13D6ABC4AC35}") = "CalculatronInstallShield", "CalculatronInstallShield\CalculatronInstallShield.isproj", "{7A981F6E-8668-4815-87A5-BECD29FA3C37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Default = CD_ROM|Default
+		Custom|Default = Custom|Default
+		DVD-10|Default = DVD-10|Default
+		DVD-18|Default = DVD-18|Default
+		DVD-5|Default = DVD-5|Default
+		DVD-9|Default = DVD-9|Default
+		SingleImage|Default = SingleImage|Default
+		WebDeployment|Default = WebDeployment|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.CD_ROM|Default.ActiveCfg = CD_ROM
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.CD_ROM|Default.Build.0 = CD_ROM
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.Custom|Default.ActiveCfg = Custom
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.Custom|Default.Build.0 = Custom
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.DVD-10|Default.ActiveCfg = DVD-10
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.DVD-10|Default.Build.0 = DVD-10
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.DVD-18|Default.ActiveCfg = DVD-18
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.DVD-18|Default.Build.0 = DVD-18
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.DVD-5|Default.ActiveCfg = DVD-5
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.DVD-5|Default.Build.0 = DVD-5
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.DVD-9|Default.ActiveCfg = DVD-9
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.DVD-9|Default.Build.0 = DVD-9
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.SingleImage|Default.ActiveCfg = SingleImage
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.SingleImage|Default.Build.0 = SingleImage
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.WebDeployment|Default.ActiveCfg = WebDeployment
+		{7A981F6E-8668-4815-87A5-BECD29FA3C37}.WebDeployment|Default.Build.0 = WebDeployment
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
