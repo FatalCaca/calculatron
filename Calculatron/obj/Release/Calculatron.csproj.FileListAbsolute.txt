@@ -1,0 +1,14 @@
+C:\Users\vlad\Calculatron\Calculatron\bin\Release\Calculatron.exe.config
+C:\Users\vlad\Calculatron\Calculatron\bin\Release\Calculatron.exe
+C:\Users\vlad\Calculatron\Calculatron\bin\Release\Calculatron.pdb
+C:\Users\vlad\Calculatron\Calculatron\bin\Release\NCalc.dll
+C:\Users\vlad\Calculatron\Calculatron\obj\Release\MainWindow.baml
+C:\Users\vlad\Calculatron\Calculatron\obj\Release\MainWindow.g.cs
+C:\Users\vlad\Calculatron\Calculatron\obj\Release\App.g.cs
+C:\Users\vlad\Calculatron\Calculatron\obj\Release\Calculatron_Content.g.cs
+C:\Users\vlad\Calculatron\Calculatron\obj\Release\Calculatron_MarkupCompile.cache
+C:\Users\vlad\Calculatron\Calculatron\obj\Release\Calculatron.g.resources
+C:\Users\vlad\Calculatron\Calculatron\obj\Release\Calculatron.Properties.Resources.resources
+C:\Users\vlad\Calculatron\Calculatron\obj\Release\Calculatron.csproj.GenerateResource.Cache
+C:\Users\vlad\Calculatron\Calculatron\obj\Release\Calculatron.exe
+C:\Users\vlad\Calculatron\Calculatron\obj\Release\Calculatron.pdb
