@@ -44,7 +44,7 @@ namespace Calculatron
         }
 
         /// Returns square of a number
-        public float Carre(float valeur)
+        public float Square(float valeur)
         {
             return valeur * valeur;
         }
