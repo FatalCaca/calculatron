@@ -23,93 +23,39 @@ namespace Calculatron
     /// </summary>
     public partial class MainWindow : Window
     {
-        private bool isResult;
+        private ExpressionBuilder _builder;
 
         public MainWindow()
         {
             InitializeComponent();
+            _builder = new ExpressionBuilder();
         }
 
         private void btn_Click_Chiffre(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
-
-            if (isResult)
-            {
-                lbl_affichage.Content = "";
-                isResult = false;
-            }
-
-            AddFigure((string)btn.Content);
-        }
-
-        /// <summary>
-        /// Méthode d'ajout de chiffre en fin de chaine dans l'afficheur
-        /// </summary>
-        /// <param name="figure">Chiffre à ajouter</param>
-        private void AddFigure(string figure)
-        {
-            if (figure == ".")
-            {
-                if (!Regex.IsMatch((string)lbl_affichage.Content + ".", @"\d*\.\d*\."))
-                    lbl_affichage.Content = (string)lbl_affichage.Content + figure;
-            }
-            else
-            {
-                lbl_affichage.Content = (string)lbl_affichage.Content + figure;
-            }
-        }
-
-        /// <summary>
-        /// Méthode d'ajout de symbole en fin de chaine dans l'afficheur
-        /// </summary>
-        /// <param name="symbole">Symbole à ajouter</param>
-        private void AddSymbole(string symbole)
-        {
-            isResult = false;
-            if (!Regex.IsMatch((string)lbl_affichage.Content, @"[\/+*\-]$"))
-            {
-                lbl_affichage.Content = (string)lbl_affichage.Content + symbole;
-            }
+            lbl_affichage.Content = _builder.AddFigure((string)btn.Content);
         }
 
         private void btn_Click_Symbole(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
             if ((string)btn.Content == WebUtility.HtmlDecode("&#8592;"))
-                EraseLastCharacter();
+                lbl_affichage.Content = _builder.EraseLastCharacter();
             else
-                AddSymbole((string)btn.Content);
-        }
-
-        private void EraseLastCharacter()
-        {
-            string print = lbl_affichage.Content.ToString();
-            if (print.Length != 0)
-                lbl_affichage.Content = print.Remove(print.Length - 1);
+                lbl_affichage.Content = _builder.AddSymbole((string)btn.Content);
         }
 
         private void btn_Click_Egal(object sender, RoutedEventArgs e)
         {
-            EvaluateExpression();
-        }
-
-        private void EvaluateExpression()
-        {
-            NC.Expression expr = new NC.Expression((string)lbl_affichage.Content);
             try
             {
-                object res = expr.Evaluate();
-                lbl_affichage.Content = res.ToString();
-                isResult = true;
+                lbl_affichage.Content = _builder.EvaluateExpression();
             }
-            catch (NC.EvaluationException evalEx)
+            catch (Exception)
             {
-                MessageBox.Show("Erreur d'interprétation dans le calcul.\n\nMessage d'erreur : \n\t-" + evalEx.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erreur générale.\n\nMessage d'erreur : \n\t-" + ex.Message);
+                lbl_affichage.Content = "";
+                MessageBox.Show("Expression mal formée");
             }
         }
 
@@ -120,46 +66,69 @@ namespace Calculatron
         /// <param name="e"></param>
         private void btn_Click_Clear(object sender, RoutedEventArgs e)
         {
+            _builder.Clear();
             lbl_affichage.Content = "";
-            isResult = false;
         }
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
         {
             try
             {
+                string tempExpr = "";
+
                 if (Regex.IsMatch(e.Key.ToString(), @"NumPad\d"))
                 {
-                    AddFigure(e.Key.ToString().Last().ToString());
+                    tempExpr = _builder.AddFigure(e.Key.ToString().Last().ToString());
                 }
-                switch (e.Key.ToString())
+                else
                 {
-                    case "Decimal":
-                        AddFigure(".");
-                        break;
-                    case "Divide":
-                        AddSymbole("/");
-                        break;
-                    case "Multiply":
-                        AddSymbole("*");
-                        break;
-                    case "Add":
-                        AddSymbole("+");
-                        break;
-                    case "Subtract":
-                        AddSymbole("-");
-                        break;
-                    case "Return":
-                        EvaluateExpression();
-                        break;
-                    //TODO : Appuyer sur 'Retour arrière' pour supprimer
-                    default:
-                        break;
+                    switch (e.Key.ToString())
+                    {
+                        case "Decimal":
+                            tempExpr = _builder.AddFigure(".");
+                            break;
+                        case "Divide":
+                            tempExpr = _builder.AddSymbole("/");
+                            break;
+                        case "Multiply":
+                            tempExpr = _builder.AddSymbole("*");
+                            break;
+                        case "Add":
+                            tempExpr = _builder.AddSymbole("+");
+                            break;
+                        case "Subtract":
+                            tempExpr = _builder.AddSymbole("-");
+                            break;
+                        case "Return": 
+                            try
+                            {
+                                tempExpr = _builder.EvaluateExpression();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                            break;
+                        case "D5":
+                            tempExpr = _builder.AddSymbole("(");
+                            break;
+                        case "OemOpenBrackets":
+                            tempExpr = _builder.AddSymbole(")");
+                            break;
+                        case "Back":
+                            tempExpr = _builder.EraseLastCharacter();
+                            break;
+                        default:
+                            break;
+                    }
                 }
-            }
-            catch (Exception)
-            {
 
+                lbl_affichage.Content = tempExpr;
+            }
+            catch (Exception ex)
+            {
+                lbl_affichage.Content = "";
+                MessageBox.Show(ex.Message);
             }
         }
     }
