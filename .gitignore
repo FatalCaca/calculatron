@@ -1,0 +1,5 @@
+Calculatron/bin/**/*
+Calculatron/obj/**/*
+Calculatron/CalculatronTests/bin/**/
+Calculatron/CalculatronTests/obj/**/
+Calculatron/.vs/**/
